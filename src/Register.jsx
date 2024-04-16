@@ -64,7 +64,15 @@ const Register = () => {
       </p>
       <h1>Register</h1>
       <form>
-        <label htmlFor="username">Username:</label>
+        <label htmlFor="username">
+          Username:
+          <span className={validName ? "valid " : "hide"}>
+            <FontAwesomeIcon icon={faCheck} />
+          </span>
+          <span className={validName || !user ? "hide" : "invalid"}>
+            <FontAwesomeIcon icon={faTimes} />
+          </span>
+        </label>
         <input
           type="text"
           id="username"
