@@ -5,7 +5,7 @@ import {
   faTimes,
   faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons";
-import axios from "./api/axios";
+import customFetch from "./api/axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{3,23}$/;
@@ -65,16 +65,16 @@ const Register = () => {
       return;
     }
     try {
-      const response = await axios.post(
+      const response = await customFetch.post(
         REGISTER_URL,
         JSON.stringify({ user, pwd }),
         {
-          headers: { "Content-type ": "applicaton/json" },
+          headers: { "Content-Type": "application/json" },
           withCredentials: true,
         }
       );
-      console.log(response.data);
-      console.log(response.accessToken);
+      console.log(response?.data);
+      console.log(response?.accessToken);
       console.log(JSON.stringify(response));
       setSuccess(true);
       // clear input feilds
