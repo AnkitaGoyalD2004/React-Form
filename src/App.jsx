@@ -3,7 +3,7 @@ import Login from "./components/Login";
 import Admin from "./components/Admin";
 import Editor from "./components/Editor";
 import Home from "./components/Home";
-import Lounge from "./components/Launge";
+import Lounge from "./components/Lounge";
 import Layout from "./components/Layout";
 import LinkPage from "./components/LinkPage";
 import RequireAuth from "./components/RequireAuth";
