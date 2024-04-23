@@ -9,11 +9,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <AuthProvider>
-        {/* <Routes>
-{/* <Route path="/*"
-      </Routes> */}
+        <Routes>
+          <Route path="/*" element={<App />} />
+        </Routes>
       </AuthProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
-setTimeout([console.log("hello")], 3000);
